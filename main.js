@@ -36,24 +36,40 @@ console.log(`-- germanLevel parse`);
 console.log(`germanLevel parsed`, germanLevel);
 
 // --------------  Permanent Resident permit criteria
-let wPermit = residencePermit == 'YES' && yearsInGermany >=5 && workingYears>=3 && currentlyWorking == `YES` && germanLevel >=3;
+let workingPermit = residencePermit == 'YES' && yearsInGermany >=5 && workingYears>=3 && currentlyWorking == `YES` && germanLevel >=3;
 let blueCard = (residencePermit == `YES` && yearsInGermany >=2 && germanLevel >=3 && currentlyWorking == `YES`) || (residencePermit == 'YES' && yearsInGermany >=3 && germanLevel >=2 && currentlyWorking == `YES`);
 let marriage = currentlyMarried == `YES` && marriageLenght >= 3 && germanLevel >=3;
 let asylum = (germanLevel >= 3 && wagePercentage == `YES` && yearsInGermany >= `YES`) || (germanLevel >= 4 && wagePercentage ==`YES` && yearsInGermany >= 3);
 
 // -------------- Which permit applies?
 console.log(`-- Permit true or false`);
-console.log(`wPermit`, wPermit);
+console.log(`workingPermit`, workingPermit);
 console.log(`bluecard`, blueCard);
 console.log(`marriage`, marriage);
 console.log(`asylum`, asylum);
 
-// ---------------  Visa decision
-if (wPermit || blueCard || marriage || asylum) {
-    alert(`Congratulations! You are eligible for permantent residency!`);
+// ---------------  Visa decision with specific case
+if (workingPermit) {
+    alert(`Congratulations! You are eligible for permantent residency with a working permit!`);
+    } else if (blueCard){
+    alert(`Congratulations! You are eligible for permantent residency with a Blue Card!`);
+
+    } else if (marriage){
+    alert(`Congratulations! You are eligible for permantent residency based on marriage!`);
+
+    } else if (asylum){
+    alert(`Congratulations! You are eligible for permantent residency based on asylum!`);
+
     } else {
     alert(`Sorry, you are not eligible. Fuck Borders!`);
 };
+
+// ---------------  Visa decision without specifying the case
+/* if (workingPermit || blueCard || marriage || asylum) {
+    alert(`Congratulations! You are eligible for permantent residency!`);
+    } else {
+    alert(`Sorry, you are not eligible. Fuck Borders!`);
+}; */
 
 //JS Delay value
 },1500);
