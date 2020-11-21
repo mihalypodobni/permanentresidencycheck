@@ -1,0 +1,19 @@
+body{
+    background-color:#48a89e;
+    width: 100vw;
+    height: 100vh;
+}
+
+main > div{
+    margin: auto;
+    margin-top: 15%;
+    width: 80vmin;
+    height: 80vmin;
+
+}
+.background {
+    background-image: url(./assets/maze.jpeg);
+    background-origin: border-box;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
