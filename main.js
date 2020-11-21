@@ -4,13 +4,13 @@ setTimeout(function(){
 
 // --------------  Gather information for criteria
 let residencePermit = prompt(`Do you have a residency permit?`).toUpperCase();
-let germanLevel = prompt(`What's your german level? (eg.: A2, B1, C2)`).toUpperCase();
+let germanLevel = prompt(`What's your german level? (eg.: A1, B1, C2)`).toUpperCase();
 let currentlyMarried = prompt(`Are you currently married?`).toUpperCase();
 let marriageLenght = prompt(`How long have you been married? (years)`);
 let yearsInGermany = prompt(`How long have you been living in Germany? (years)`);
 let workingYears = prompt(`How long have you been working in Germany? (years)`);
 let currentlyWorking = prompt(`Are you currently working?`).toUpperCase();
-let wagePercentage = prompt(`Are you currently earning 70% of live costs from a job`).toUpperCase();
+let wagePercentage = prompt(`Are you currently earning 70% of living costs from a job?`).toUpperCase();
 
 console.log(`-- INFO COLLECTED`);
 console.log(`residencePermit` ,residencePermit);
